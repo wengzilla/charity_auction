@@ -16,7 +16,7 @@ items = [{
 {
   title: "4x15 Minute Back Massage",
   caption: "Massages by a Nepalese masseuse!",
-  donor: "Greg Austin",
+  donor: "Sandhya Banskota",
   starting_price: "20",
   photo_url: "http://s3-media4.fl.yelpassets.com/bphoto/AU9p_pPL5SzX7L8IEPQTUA/ls.jpg"
 },
