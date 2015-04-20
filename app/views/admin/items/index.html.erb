@@ -19,7 +19,7 @@
         <th>Starting Price</th>
       </tr>
       <% @items.each do |item| %>
-        <tr>
+        <tr class='clickable-row' data-href="<%= edit_admin_item_url(item) %>">
           <td><%= image_tag item.photo_url, :width => 100 %></td>
           <td><%= item.title %></td>
           <td><%= item.caption %></td>
@@ -30,3 +30,17 @@
     </table>
   </div>
 </div>
+
+<script>
+  $(document).ready(function(){
+    $(".clickable-row").click(function(event) {
+      window.location = $(this).data('href')
+    })
+  })
+</script>
+
+<style>
+  .clickable-row {
+    cursor: pointer;
+  }
+</style>

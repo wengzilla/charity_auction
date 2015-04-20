@@ -2,7 +2,7 @@
   <div class="page-header">
     <h1>Add an Item</h1>
   </div>
-  <%= form_for @item, :url => admin_items_path, :class => "form-horizontal" do |f| %>
+  <%= form_for [:admin, @item], :class => "form-horizontal" do |f| %>
     
     <div class="form-group">
       <%= f.label :title, :class => "col-sm-2 control-label" %>
