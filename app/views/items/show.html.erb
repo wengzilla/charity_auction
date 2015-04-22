@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row mtb">
+    <div class="col-md-5 col-md-offset-1 of">
+      <img src="<%= @item.photo_url %>" class="img-responsive aligncenter" alt="">
+    </div><!--/col-md-5-->
+    
+    <div class="col-md-5 col-md-offset-1">
+      <h1 class="centered"><%= @item.title %></h1>
+      <h4 class="centered mb">Donated by: <%= @item.donor %></h4>
+      <h4>Current bid: <%= "$#{@item.highest_bid.price}" %></h4>
+      <% if @item.highest_bid.email.present? %>
+        <h4>Highest bidder: <%= link_to @item.highest_bid.email, "mailto:#{@item.highest_bid.email}" %></h4>
+      <% end %>
+      <%= form_for [@item, @bid], :html => {:class => "form"} do |f| %>
+        <div class="form-group">
+          <%= f.text_field :price, :value => (@item.highest_bid.price) + Money.us_dollar(100), :class => "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :email, :placeholder => "jharvard@mba2016.hbs.edu", :class => "form-control" %>
+          <%= f.hidden_field :item_id, :value => @item.id %>
+        </div>
+        <%= f.submit "Place bid", :class => "btn btn-primary" %>
+      <% end %>
+      <p>Description: <%= @item.caption %></p>
+    </div>
+  </div>
+</div>
