@@ -36,6 +36,7 @@ group :production do
   gem 'rails_12factor'
   gem 'newrelic_rpm'
   gem 'pg'
+  gem 'mandrill-api'
 end
 
 # Use ActiveModel has_secure_password
