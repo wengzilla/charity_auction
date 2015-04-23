@@ -11,26 +11,19 @@
     gridContainer.cubeportfolio({
 
         defaultFilter: '*',
-
         animationType: 'rotateRoom',
-
         gapHorizontal: 0,
-
         gapVertical: 0,
-
         gridAdjustment: 'responsive',
+        caption: '',
+        displayType: 'default',
 
-        caption: 'overlayBottomAlong',
-
-        displayType: 'bottomToTop',
-
-        displayTypeSpeed: 100,
-
+        //displayTypeSpeed: 100,
         // lightbox
-        lightboxDelegate: '.cbp-lightbox',
-        lightboxGallery: true,
-        lightboxTitleSrc: 'data-title',
-        lightboxShowCounter: true,
+        // lightboxDelegate: '.cbp-lightbox',
+        // lightboxGallery: true,
+        // lightboxTitleSrc: 'data-title',
+        // lightboxShowCounter: true,
 
 
 
