@@ -17,6 +17,7 @@
         <th>Caption</th>
         <th>Donor</th>
         <th>Starting Price</th>
+        <th>Actions</th>
       </tr>
       <% @items.each do |item| %>
         <tr class='clickable-row' data-href="<%= edit_admin_item_url(item) %>">
@@ -25,6 +26,7 @@
           <td><%= item.caption %></td>
           <td><%= item.donor %></td>
           <td><%= item.starting_price %></td>
+          <td><%= button_to "delete", admin_item_path(item), :method => :delete, :class => "btn btn-danger" %>
         </tr>
       <% end %>
     </table>
