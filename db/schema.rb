@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421222437) do
+ActiveRecord::Schema.define(version: 20150423001658) do
 
   create_table "bids", force: true do |t|
     t.string   "email",                          null: false
@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(version: 20150421222437) do
 
   create_table "items", force: true do |t|
     t.string   "title"
-    t.string   "caption"
+    t.text     "caption",                 limit: 255
     t.string   "donor"
     t.string   "photo_url"
-    t.integer  "starting_price_cents",    default: 0,     null: false
-    t.string   "starting_price_currency", default: "USD", null: false
+    t.integer  "starting_price_cents",                default: 0,     null: false
+    t.string   "starting_price_currency",             default: "USD", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
